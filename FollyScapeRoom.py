@@ -271,7 +271,7 @@ class InstructionsPage(tk.Frame):
     def open_link(self):
         """Abre el link de YouTube en el navegador."""
         import webbrowser
-        webbrowser.open("https://github.com/BaphomeT-T/Fooly-Scape-Room/blob/master/respuestas.txt")
+        webbrowser.open("https://github.com/BaphomeT-T/Fooly_Scape_Room/blob/master/requirements.txt")
 
 # ------------------------------------------------------------------
 # PÁGINA 3: ENTRADA DE NÚMEROS DE TELÉFONO
