@@ -1,0 +1,14 @@
+# PRUEBA 1: El Libro 
+CODIGO_1 = BAT
+
+# PRUEBA 2: Charadas
+CODIGO_2 = 138
+
+# PRUEBA 3: La Verdad Incómoda 
+CODIGO_3 = FOG
+
+# PRUEBA 4: Adivina el Dato Personal 
+CODIGO_4 = 492
+
+# PRUEBA 5: El Ritual Final 
+CODIGO_5 = HEX
