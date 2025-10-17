@@ -1,4 +1,4 @@
-# 🎃 FOOLY SCAPE ROOM - Halloween Edition
+# 🎃 FOOLY SCAPE ROOM 
 
 <div align="center">
 
