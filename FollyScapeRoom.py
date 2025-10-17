@@ -213,7 +213,8 @@ class InstructionsPage(tk.Frame):
             "   todos dicen 'inocente' menos uno que es el impostor. Luego de ver su rol",
             "   en secreto, todos guardan sus papeles.",
             "2. El anfitrión pide que todos cierren los ojos y luego que solo los abra",
-            "   el impostor para conocerlo.",
+            "   el impostor para conocerlo. El objetivo del impostor es lograr que los demás",
+            "   pierdan, si los demás ganan, beberá 3 shots.",
             "3. El anfitrión revisa los códigos en este",
             "4. El anfitrión puede dar ayudas a cambio de shots o penitencias según",
             "   le plazca.",
@@ -221,7 +222,7 @@ class InstructionsPage(tk.Frame):
         ]
         
         for i, instr in enumerate(instructions):
-            if i == 6:  # La línea que dice "este link"
+            if i == 7:  # La línea que dice "este link"
                 link_frame = tk.Frame(instr_frame, bg=COLORS['bg'])
                 link_frame.pack(anchor='w', padx=40, pady=2)
                 
