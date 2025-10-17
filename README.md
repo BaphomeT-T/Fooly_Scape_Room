@@ -28,8 +28,7 @@ El sistema utiliza **Twilio** para realizar llamadas telefónicas reales con voz
 
 ## ✨ Características
 
-- 🎨 **Interfaz oscura y elegante** en tonos negro y morado
-- 📱 **Soporte para 1-8 jugadores** con números de teléfono internacionales
+- 📱 **Soporte para 1-8 jugadores** con números de teléfono internacionales, se puede jugar con mas de 8 jugadores pero a partir del 9no no podrá recibir las llamadas aleatorias.
 - 🔊 **Llamadas automatizadas** con voz en español (Polly.Mia)
 - 🎲 **Sistema aleatorio** que elige a quién llamar en cada nivel
 - 🔄 **Función de repetir llamada** si alguien no escuchó bien
@@ -48,6 +47,7 @@ El sistema utiliza **Twilio** para realizar llamadas telefónicas reales con voz
    - El anfitrión reparte papeles a cada jugador
    - Todos dicen "INOCENTE" excepto uno que dice "IMPOSTOR"
    - Cada jugador ve su rol en secreto y guarda su papel
+   - El objetivo del impostor es lograr que los demás pierdan, si los demás ganan, beberá 3 shots.
 
 3. **Revelación del Impostor**:
    - El anfitrión pide a todos cerrar los ojos
@@ -123,7 +123,6 @@ TWILIO_AUTH_TOKEN=tu_auth_token_aqui
 TWILIO_NUMBER=+1234567890
 ```
 
-> ⚠️ **IMPORTANTE**: Nunca subas el archivo `.env` a GitHub. Ya está incluido en `.gitignore`.
 
 ### 4. Verificar códigos de respuesta
 
@@ -136,7 +135,7 @@ Los códigos para cada nivel están en el archivo **`respuestas.txt`**. El anfit
 ### Iniciar la aplicación
 
 ```bash
-python main.py
+python FollyScapeRoom.py
 ```
 
 ### Flujo del juego
@@ -159,7 +158,7 @@ python main.py
 ## 🎪 Las 5 Pruebas
 
 ### 📚 Nivel 1: El Detective de Baker Street
-Encuentra el libro correcto respondiendo: *¿Quién escribió sobre un detective que toca violín y vive en Baker Street?*
+Encuentra el libro correcto respondiendo: *¿Quién escribió sobre un detective que toca violín y vive en Baker Street?* Esta requiere de un librero con un libro de Arthur Conan Doyle en el cual se esconderá el código, en caso de no tenerlo, el anfitrión puede revelar el código si los participantes responden correctamente.
 
 ### 🎭 Nivel 2: Charadas
 El anfitrión da una palabra que deben actuar sin hablar. ¡La comunicación no verbal es clave!
@@ -187,8 +186,7 @@ Fooly_Scape_Room/
 ├── main.py                 # Aplicación principal
 ├── respuestas.txt          # Códigos de respuesta (para el anfitrión)
 ├── requirements.txt        # Dependencias de Python
-├── .env                    # Credenciales de Twilio (NO SUBIR A GIT)
-├── .gitignore             # Archivos ignorados por Git
+├── .env                    # Credenciales de Twilio 
 └── README.md              # Este archivo
 ```
 
@@ -234,26 +232,6 @@ Edita las funciones `MENSAJE_INICIO` y `generate_success_twiml()` para personali
 
 ---
 
-## 🐛 Solución de Problemas
-
-### Error: "Las credenciales de Twilio no se cargaron"
-- Verifica que el archivo `.env` existe y tiene las 3 variables
-- Asegúrate de que no hay espacios extra en los valores
-
-### Error: "Falló la llamada"
-- Verifica que tienes saldo en tu cuenta de Twilio
-- En modo prueba, confirma que los números están verificados
-- Revisa que el formato del número incluye código de país: `+593987654321`
-
-### La interfaz no se ve bien
-- Asegúrate de tener una resolución mínima de 900x700
-- Verifica que Tkinter está instalado correctamente
-
-### No se escucha la voz en la llamada
-- Confirma que seleccionaste voz "Polly.Mia" en Twilio
-- Verifica que el idioma está configurado como "es-MX"
-
----
 
 ## 🤝 Contribuir
 
@@ -267,29 +245,14 @@ Edita las funciones `MENSAJE_INICIO` y `generate_success_twiml()` para personali
 
 ---
 
-## 📜 Licencia
-
-Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
-
----
 
 ## 👥 Créditos
 
-- **Desarrollado por**: [Tu Nombre]
+- **Desarrollado por**: Baph
 - **Powered by**: Twilio API
 - **Voz**: Amazon Polly (Mia - Español Mexicano)
-- **Inspirado en**: Among Us, Mafia, Escape Rooms tradicionales
+- **Inspirado en**: Among Us, Mafia, Exit, Trivia Murder Party.
 
----
-
-## 📞 Contacto
-
-¿Preguntas? ¿Sugerencias? ¿Quieres compartir tu experiencia?
-
-- **GitHub**: [@TU_USUARIO](https://github.com/TU_USUARIO)
-- **Email**: tu_email@ejemplo.com
-
----
 
 <div align="center">
 
