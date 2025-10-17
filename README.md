@@ -5,7 +5,6 @@
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Tkinter](https://img.shields.io/badge/GUI-Tkinter-orange.svg)
 ![Twilio](https://img.shields.io/badge/API-Twilio-red.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
 
 **Un escape room inmersivo con llamadas telefónicas misteriosas, traición y mucha tensión.**
 
